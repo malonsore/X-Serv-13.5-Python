@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 
 fich=open('/etc/passwd', 'r')
-lista=fich.readlines()
+list_lines=fich.readlines()
 dic_shells={}
 usuario_buscar = 'pepito'
 
-for line in lista:
-    linea=line.split(':')
-    user=linea[0]
-    shell=linea[-1]
+for line in list_lines:
+    list_split=line.split(':')
+    user_=list_split[0]
+    shell=list_split[-1]
     dic_shells[user] = shell
 
 try:
